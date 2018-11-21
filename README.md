@@ -13,4 +13,9 @@
     - For more basics:
         - https://facebook.github.io/react-native/docs/getting-started.html
 
+## Git log out user from command line - Windows 10
+I came across this same problem, and the above answer didn't work for me because github was being fed my credentials through windows credential manager instead of git bash.
+
+You may have to check windows credential manager and delete the github entry under **control panel > user accounts > credential manager > Windows credentials > Generic credentials**
+
 # 1: Airbnb Clone using React Native - Home Screen
