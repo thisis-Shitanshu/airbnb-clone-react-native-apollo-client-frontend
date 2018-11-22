@@ -51,10 +51,10 @@ You may have to check windows credential manager and delete the github entry und
 
 ## Progress so far:
 - Home Screen:
-![Home Screen](../master/screenshots/1.HomeScreen.png)
+![Home Screen|medium](../master/screenshots/1.HomeScreen.png)
 
 - Facebook Button Press:
-![Facebook Button Press](../master/screenshots/1.1.FacebookButtonPress.png)
+![Facebook Button Press|medium](../master/screenshots/1.1.FacebookButtonPress.png)
 
 - Create Account Button Press:
-![Create Account Button Press](../master/screenshots/1.2.CreateAccountButtonPress.png)
+![Create Account Button Press|medium](../master/screenshots/1.2.CreateAccountButtonPress.png)
