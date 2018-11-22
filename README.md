@@ -51,10 +51,11 @@ You may have to check windows credential manager and delete the github entry und
 
 ## Progress so far:
 - Home Screen:
-![Home Screen](../master/screenshots/1.HomeScreen.png =480x800)
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/1.HomeScreen.png" width="48">
 
 - Facebook Button Press:
-![Facebook Button Press](../master/screenshots/1.1.FacebookButtonPress.png =480x800)
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/1.1.FacebookButtonPress.png" width="48">
+
 
 - Create Account Button Press:
-![Create Account Button Press](../master/screenshots/1.2.CreateAccountButtonPress.png =480x800)
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/1.2.CreateAccountButtonPress.png" width="48">
