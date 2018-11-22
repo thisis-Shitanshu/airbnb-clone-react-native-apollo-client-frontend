@@ -19,3 +19,42 @@ I came across this same problem, and the above answer didn't work for me because
 You may have to check windows credential manager and delete the github entry under **control panel > user accounts > credential manager > Windows credentials > Generic credentials**
 
 # 1: Airbnb Clone using React Native - Home Screen
+- **NOTES:**
+    - Have a directory structure first.
+    - It's always recommended to have an UI design build before coding.
+    - Strat with a LoggedOut screen first.
+    - CSS z-index Property:
+        - The z-index property specifies the stack order of an element.
+        - An element with greater stack order is always in front of an element with a lower stack order.
+        - Note: 
+            - z-index only works on positioned elements (position:absolute, position:relative, or position:fixed).
+
+1. Let's first start by creating dir structure:
+    - root:
+        - src
+            - containers
+            - components
+                - buttons
+                    - RoundedButtons.js
+            - styles
+                - colors
+                    - index.js
+            - screens
+                - LoggedOut.js  
+            - img
+                - airbnb-logo.png  
+1. Install **react-native-vector-icons**
+    - Run **react-native link** in Project CLI after installation.
+    - Restart the current running server.
+    - To use Icons from FontAwesome:
+        - Import Icons from **react-native-vector-icons/dist/FontAwesome**
+
+## Progress so far:
+- Home Screen:
+![Home Screen](../master/screenshots/1.HomeScreen.png)
+
+- Facebook Button Press:
+![Facebook Button Press](../master/screenshots/1.1.FacebookButtonPress.png)
+
+- Create Account Button Press:
+![Create Account Button Press](../master/screenshots/1.2.CreateAccountButtonPress.png)
