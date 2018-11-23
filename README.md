@@ -59,3 +59,26 @@ You may have to check windows credential manager and delete the github entry und
 
 - Create Account Button Press:
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/1.2.CreateAccountButtonPress.png" width="250">
+
+# 2: Airbnb Clone using React Native - Login Screen
+- Adding to directory structure:
+    - root:
+        - src
+            - containers
+            - components
+                - buttons
+                    - RoundedButtons.js
+                    - **NextArrowButton.js**
+                - form
+                    - **InputField.js**
+            - styles
+                - colors
+                    - index.js
+            - screens
+                - LoggedOut.js
+                - LogIn.js  
+            - img
+                - airbnb-logo.png
+
+1. Add a new screen LogIn.js
+1. Create set of form components.
