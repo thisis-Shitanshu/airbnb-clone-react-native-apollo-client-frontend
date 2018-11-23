@@ -13,19 +13,16 @@ import {
 import colors from '../../styles/colors';
 
 export default class InputField extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            secureInput: props.inputType === "text" || props.inputType === "email" ? false : true
-        };
-        this.toggleShowPassword = this.toggleShowPassword.bind(this);
-    }
+    state = {
+        secureInput: !(this.props.inputType === 'text' || this.props.inputType === 'email')
+    };
 
-    toggleShowPassword() {
+    toggleShowPassword = () => {
         this.setState({
             secureInput: !this.state.secureInput
         })
     }
+
     render() {
         const { 
             labelText,
@@ -44,27 +41,27 @@ export default class InputField extends Component {
         const borderBottom = borderBottomColor || 'transparent';
 
         return (
-            <View
-                style={[customStyle, styles.wrapper]}
-            >
-                <Text
-                    style={[{color, fontSize}, styles.label]}
-                >{labelText}</Text>
+            <View style={[customStyle, styles.wrapper]}>
+                <Text style={[{ color, fontSize }, styles.label]}>
+                    {labelText}
+                </Text>
                 {
                     inputType === 'password' ? 
-                    <TouchableOpacity
-                        style={styles.showButton}
-                        onPress={this.toggleShowPassword}
-                    >
-                        <Text
-                            style={styles.showButtonText}
-                        >{secureInput ? 'Show' : 'Hide'}</Text>
-                    </TouchableOpacity>
+                    (   
+                        <TouchableOpacity
+                            style={styles.showButton}
+                            onPress={this.toggleShowPassword}
+                        >
+                            <Text style={styles.showButtonText}>
+                                {secureInput ? 'Show' : 'Hide'}
+                            </Text>
+                        </TouchableOpacity>
+                    )
                     : null
                 }
                 <TextInput
                     autoCorrect={false}
-                    style={[{color: inputColor, borderBottomColor: borderBottom}, styles.inputField]}
+                    style={[{ color: inputColor, borderBottomColor: borderBottom }, styles.inputField]}
                     secureTextEntry={secureInput}
                     onChangeText={onChangeText}
                 />
@@ -95,7 +92,6 @@ const styles = StyleSheet.create({
     inputField: {
         borderBottomWidth: 1,
         paddingTop: 5,
-        paddingBottom: 5
     },
     showButton: {
         position: 'absolute',

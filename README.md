@@ -129,3 +129,21 @@ You may have to check windows credential manager and delete the github entry und
                 - airbnb-logo.png
 
 1. Let's build an Error message screen.
+
+# 5 Airbnb Clone using React Native - Basic Login Validation (Fixing all errors)
+
+## Progress so far:
+- No there was no ScrollView error, it's just that iOS and Android and diffrent UX.
+
+- Error Screen:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/5.1.ErrorScreen.png" width="250">
+
+- Error-Free Screen:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/5.2.ErrorFreeScreen.png" width="250">
+
+- Entering Value:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/5.3.EnteringValue.png" width="250">
+
+- Entering Wrong Value:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/5.4.EnteringWrongValue.png" width="250">
+

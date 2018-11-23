@@ -16,22 +16,14 @@ import NextArrowButton from '../components/buttons/NextArrowButton';
 import Notification from '../components/Notification';
 
 export default class LogIn extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            formValid: true,
-            validEmail: false,
-            emailAddress: '',
-            validPassword: false
-        }
-        this.handleCloseNotification = this.handleCloseNotification.bind(this);
-        this.handleEmailChange = this.handleEmailChange.bind(this);
-        this.handleNextButton = this.handleNextButton.bind(this);
-        this.handlePasswordChange = this.handlePasswordChange.bind(this);
-        this.toggleNextButtonState = this.toggleNextButtonState.bind(this);
-    }
+    state = {
+        formValid: false,
+        validEmail: false,
+        emailAddress: '',
+        validPassword: false
+    };
 
-    handleNextButton() {
+    handleNextButton = () => {
         if (this.state.emailAddress === 'hello@imandy.ie' && this.state.validPassword) {
             this.setState({ formValid: true });
         } else {
@@ -39,26 +31,25 @@ export default class LogIn extends Component {
         }
     }
 
-    handleCloseNotification() {
+    handleCloseNotification = () => {
         this.setState({ formValid: true });
     }
 
-    handleEmailChange(email) {
+    handleEmailChange = (email) => {
         const emailCheckRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
         this.setState({ emailAddress: email });
 
         if(!this.state.validEmail) {
             if (emailCheckRegex.test(email)) {
                 this.setState({ validEmail: true });
             }
-        } else {
-            if(!emailCheckRegex.test(email)) {
-                this.setState({ validEmail: false })
-            }
+        } else if(!emailCheckRegex.test(email)) {
+            this.setState({ validEmail: false })
         }
     }
 
-    handlePasswordChange(password) {
+    handlePasswordChange = (password) => {
         if (!this.state.validPassword) {
             if (password.length > 4) {
                 // Password has to be at least 4 characters long
@@ -69,7 +60,7 @@ export default class LogIn extends Component {
         }
     }
 
-    toggleNextButtonState() {
+    toggleNextButtonState = () => {
         const { validEmail, validPassword } = this.state;
         if (validEmail && validPassword) {
             return false;
@@ -84,18 +75,13 @@ export default class LogIn extends Component {
         const notificationMarginTop = showNotification ? 10 : 0;
         return (
             <KeyboardAvoidingView 
-                style={[{backgroundColor: background}, styles.wrapper]}
+                style={[{ backgroundColor: background }, styles.wrapper]}
+                behavior="padding"
+                enabled
             >
-                {/**In  KeyboardAvoidingView tag I have not set the behavior to padding because, there's some issue with Scroll View.*/}
-                <View
-                    style={styles.scrollViewWrapper}
-                >
-                    <ScrollView
-                        style={styles.scrollView}
-                    >
-                        <Text
-                            style={styles.loginHeader}
-                        >Log In</Text>
+                <View style={styles.scrollViewWrapper}>
+                    <ScrollView style={styles.scrollView}>
+                        <Text style={styles.loginHeader}>Log In</Text>
                         <InputField 
                             labelText="EMAIL ADDRESS"
                             labelTextSize={14}
@@ -103,7 +89,7 @@ export default class LogIn extends Component {
                             textColor={colors.white}
                             borderBottomColor={colors.white}
                             inputType="email"
-                            customStyle={{marginBottom: 30}}
+                            customStyle={{ marginBottom: 30 }}
                             onChangeText={this.handleEmailChange}
                         />
                         <InputField 
@@ -113,26 +99,31 @@ export default class LogIn extends Component {
                             textColor={colors.white}
                             borderBottomColor={colors.white}
                             inputType="password"
-                            customStyle={{marginBottom: 30}}
+                            customStyle={{ marginBottom: 30 }}
                             onChangeText={this.handlePasswordChange}
                         />
                     </ScrollView>
-                    <View style={styles.nextButton}>
-                        <NextArrowButton 
-                            handleNextButton={this.handleNextButton}
-                            disabled={this.toggleNextButtonState()}
-                        />
+                    <NextArrowButton 
+                        handleNextButton={this.handleNextButton}
+                        disabled={this.toggleNextButtonState()}
+                    />
                     </View>
-                    <View style={[styles.notificationWrapper, {marginTop: notificationMarginTop}]}>
+                    {
+                        /*
+                            <View style={styles.nextButton}>
+                                <NextArrowButton .../>  
+                            </View>
+                        */
+                    }    
+                    <View style={[styles.notificationWrapper, { marginTop: notificationMarginTop }]}>
                         <Notification 
-                            showNotification={showNotification}
+                            showNotification={ showNotification }
                             handleCloseNotification={this.handleCloseNotification}
                             type="Error"
                             firstLine="Those credentials don't look right."
                             secondLine="Please try again."
                         />
                     </View>
-                </View>
             </KeyboardAvoidingView>
         );
     }
@@ -146,6 +137,12 @@ const styles = StyleSheet.create({
     scrollViewWrapper: {
         marginTop: 70,
         flex: 1,
+        padding: 0,
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
     },
     scrollView: {
         paddingLeft: 30,
@@ -154,19 +151,23 @@ const styles = StyleSheet.create({
         flex: 1
     },
     loginHeader: {
-        fontSize: 34,
+        fontSize: 30,
         color: colors.white,
         fontWeight: '300',
         marginBottom: 40
     },
+    /*
     nextButton: {
         alignItems: 'flex-end',
         right: 20,
         bottom: 20
     },
+    */
     notificationWrapper: {
         position: 'absolute',
         bottom: 0,
+        left: 0,
+        right: 0,
         zIndex: 999
     }
 });

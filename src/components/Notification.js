@@ -14,22 +14,17 @@ import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import colors from '../styles/colors';
 
 export default class Notification extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            positionValue: new Animated.Value(60)
-        };
-        this.closeNotification = this.closeNotification.bind(this);
-        this.animateNotification = this.animateNotification.bind(this);
-    }
+    state = {
+        positionValue: new Animated.Value(-60)
+    };
 
-    animateNotification(value) {
+    animateNotification = (value) => {
         const { positionValue } = this.state;
         Animated.timing(
             positionValue, 
             {
                 toValue: value,
-                duration: 400,
+                duration: 300,
                 velocity: 3,
                 tension: 2,
                 friction: 8,
@@ -38,7 +33,7 @@ export default class Notification extends Component {
         ).start();
     }
 
-    closeNotification() {
+    closeNotification = () => {
         this.props.handleCloseNotification();
     }
 
@@ -49,14 +44,25 @@ export default class Notification extends Component {
             secondLine,
             showNotification
         } = this.props;
+
+        showNotification ? this.animateNotification(0) : this.animateNotification(-60);
+
         const { positionValue } = this.state;
-        showNotification ? this.animateNotification(0) : this.animateNotification(60);
+
         return (
-            <Animated.View style={[styles.wrapper]}>
+            <Animated.View style={[{ marginBottom: positionValue }, styles.wrapper]}>
                 <View style={styles.notificationContent}>
-                    <Text style={styles.errorText}>{type}</Text>
-                    <Text style={styles.errorMessage}>{firstLine}</Text>
-                    <Text style={styles.errorMessage}> {secondLine}</Text>
+                    <View style={styles.errorMessage}>
+                        <Text style={styles.errorText}>
+                            {type}
+                        </Text>
+                        <Text>
+                            {firstLine}
+                        </Text>
+                    </View>
+                    <Text style={styles.errorMessage}>
+                        {secondLine}
+                    </Text>
                 </View>
                 <TouchableOpacity
                     style={styles.closeButton}
@@ -83,15 +89,16 @@ Notification.protoTypes = {
 
 const styles = StyleSheet.create({
     wrapper: {
+        flex: 1,
         backgroundColor: colors.white,
         height: 60,
-        width: '100%',
         padding: 10
     },
     notificationContent: {
-        flexDirection: 'row',
+        flex: 1,
+        flexDirection: 'column',
         flexWrap: 'wrap',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
     },
     errorText: {
         color: colors.darkOrange,
@@ -100,12 +107,15 @@ const styles = StyleSheet.create({
         marginBottom: 2
     },
     errorMessage: {
+        flexDirection: 'row',
+        flex: 1,
         marginBottom: 2,
         fontSize: 14
     },
     closeButton: {
         position: 'absolute',
         right: 10,
-        top: 10
+        top: 10,
+        zIndex: 999
     }
 });
