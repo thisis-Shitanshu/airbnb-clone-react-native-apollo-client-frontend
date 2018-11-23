@@ -24,6 +24,7 @@ export default class LogIn extends Component {
             <KeyboardAvoidingView 
                 style={styles.wrapper}
             >
+                {/**In  KeyboardAvoidingView tag I have not set the behavior to padding because, there's some issue with Scroll View.*/}
                 <View
                     style={styles.scrollViewWrapper}
                 >
@@ -52,10 +53,6 @@ export default class LogIn extends Component {
                             customStyle={{marginBottom: 30}}
                         />
                     </ScrollView>
-                    {/**
-                        The Author has moved the below View tag outside the current View tag. But I have not. 
-                        I also feel there's an issue with Scroll View.
-                    */}
                     <View style={styles.nextButton}>
                         <NextArrowButton 
                             handleNextButton={this.handleNextButton}

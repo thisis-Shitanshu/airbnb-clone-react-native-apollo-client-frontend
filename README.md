@@ -86,3 +86,23 @@ You may have to check windows credential manager and delete the github entry und
 ## Progress so far:
 - Log In Screen:
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/2.LogInScreen.png" width="250">
+
+# 3: Airbnb Clone using React Native - Fix button hidden by keyboard and add password toggler
+- Note:
+    - Working of Show Password Button;
+        1. Logic of show password is in it's InputField Component.
+        1. If the input type is "password" we are showing the SHOW/HIDE button.
+        1. The value of secureTextEntry for TextInput depends on "secureInput".
+        1. The value of secureInput is set in the Component state.
+            - Which have a default boolean value depending on inputType.
+        1. Everytime toggleShowPassword is called, the value of secureInput is changed.
+
+## Progress so far:
+- Floating Next Button:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/3.1.FloatingButton.png" width="250">
+
+- Show Password:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/3.2.ShowPassword.png" width="250">
+
+- Handle Next Button:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/3.3.HandleNextButton.png" width="250">
