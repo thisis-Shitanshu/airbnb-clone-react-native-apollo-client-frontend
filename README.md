@@ -106,3 +106,26 @@ You may have to check windows credential manager and delete the github entry und
 
 - Handle Next Button:
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/3.3.HandleNextButton.png" width="250">
+
+# 4 Airbnb Clone using React Native - Login Error Message
+- Adding to directory structure:
+    - root:
+        - src
+            - containers
+            - components
+                - buttons
+                    - RoundedButtons.js
+                    - NextArrowButton.js
+                - form
+                    - InputField.js
+                - **Notification.js**
+            - styles
+                - colors
+                    - index.js
+            - screens
+                - LoggedOut.js
+                - LogIn.js  
+            - img
+                - airbnb-logo.png
+
+1. Let's build an Error message screen.
