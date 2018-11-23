@@ -82,3 +82,7 @@ You may have to check windows credential manager and delete the github entry und
 
 1. Add a new screen LogIn.js
 1. Create set of form components.
+
+## Progress so far:
+- Log In Screen:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/2.LogInScreen.png" width="250">
