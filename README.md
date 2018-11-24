@@ -147,3 +147,48 @@ You may have to check windows credential manager and delete the github entry und
 - Entering Wrong Value:
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/5.4.EnteringWrongValue.png" width="250">
 
+# 6 Airbnb Clone using React Native - Loading Modal
+- Adding to directory structure:
+    - root:
+        - src
+            - containers
+            - components
+                - buttons
+                    - RoundedButtons.js
+                    - NextArrowButton.js
+                - form
+                    - InputField.js
+                - Notification.js
+                - **Loader.js**
+            - styles
+                - colors
+                    - index.js
+            - screens
+                - LoggedOut.js
+                - LogIn.js  
+            - img
+                - airbnb-logo.png
+
+## GIF Error in Android
+- By default the Gif images are not supported in android react native app. 
+    - You need to set use **Fresco** to display the gif images.
+        - Edit your android/app/build.gradle file and add the following code:
+        ```java
+        compile 'com.facebook.fresco:animated-gif:1.10.0'
+        compile "com.facebook.fresco:animated-base-support:1.3.0"
+
+        // (Only if supporting WebP.)
+        compile 'com.facebook.fresco:animated-webp:1.10.0'
+        compile 'com.facebook.fresco:webpsupport:1.10.0'
+        ```
+    - Then you need to bundle the app again;
+        - You can display the gif images in two ways like this.
+        ```xml
+        <Image source={require('./../images/load.gif')}  style={{width: 100, height: 100 }}/>
+        <Image source={{uri: 'http://www.clicktorelease.com/code/gif/1.gif'}}  style={{width: 100, height:100 }}/>
+        ```
+
+## Progress so far
+- Loader on handleNextButton:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/6.LoaderOnHanleNext.png" width="250">
+

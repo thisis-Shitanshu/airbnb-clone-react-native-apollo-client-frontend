@@ -14,21 +14,31 @@ import colors from '../styles/colors';
 import InputField from '../components/form/InputField';
 import NextArrowButton from '../components/buttons/NextArrowButton';
 import Notification from '../components/Notification';
+import Loader from '../components/Loader';
 
 export default class LogIn extends Component {
     state = {
-        formValid: false,
+        formValid: true,
         validEmail: false,
         emailAddress: '',
-        validPassword: false
+        validPassword: false,
+        loadingVisible: false
     };
 
     handleNextButton = () => {
-        if (this.state.emailAddress === 'hello@imandy.ie' && this.state.validPassword) {
-            this.setState({ formValid: true });
-        } else {
-            this.setState({ formValid: false })
-        }
+        // Let's simulate a slow server to show notification
+        this.setState({ loadingVisible: true });
+
+        setTimeout(() => {
+            if (this.state.emailAddress === 'hello@imandy.ie' && this.state.validPassword) {
+                this.setState({ formValid: true, loadingVisible: false } /*, () => {
+                    alert('success');
+                    // Having a callback to alert after setState is a wise decision.
+                }*/);
+            } else {
+                this.setState({ formValid: false, loadingVisible: false })
+            }
+        }, 2000);
     }
 
     handleCloseNotification = () => {
@@ -69,7 +79,7 @@ export default class LogIn extends Component {
     }
 
     render() {
-        const { formValid } = this.state;
+        const { formValid, loadingVisible  } = this.state;
         const showNotification = formValid ? false : true;
         const background = formValid ? colors.green01 : colors.darkOrange;
         const notificationMarginTop = showNotification ? 10 : 0;
@@ -124,6 +134,10 @@ export default class LogIn extends Component {
                             secondLine="Please try again."
                         />
                     </View>
+                    <Loader 
+                        animationType="fade"
+                        modalVisible={loadingVisible}
+                    />
             </KeyboardAvoidingView>
         );
     }
@@ -167,7 +181,6 @@ const styles = StyleSheet.create({
         position: 'absolute',
         bottom: 0,
         left: 0,
-        right: 0,
-        zIndex: 999
+        right: 0
     }
 });
