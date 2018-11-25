@@ -192,3 +192,11 @@ You may have to check windows credential manager and delete the github entry und
 - Loader on handleNextButton:
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/6.LoaderOnHanleNext.png" width="250">
 
+# 7: Airbnb Clone using React Native - Animated check marks
+- We'll add an animated checkmark when the input field has a valid value.
+- Let's change the keyboard if the input field is an email.
+
+
+- Animated Checkmark:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/7.AnimatedCheckmark.png" width="250">
+
