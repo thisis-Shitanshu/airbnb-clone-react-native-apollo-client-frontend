@@ -200,3 +200,35 @@ You may have to check windows credential manager and delete the github entry und
 - Animated Checkmark:
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/7.AnimatedCheckmark.png" width="250">
 
+# 8: Airbnb Clone using React Native - Forgot Password
+- Adding to directory structure:
+    - root:
+        - src
+            - containers
+            - components
+                - buttons
+                    - RoundedButtons.js
+                    - NextArrowButton.js
+                - form
+                    - InputField.js
+                - Notification.js
+                - Loader.js
+            - styles
+                - colors
+                    - index.js
+            - screens
+                - LoggedOut.js
+                - LogIn.js  
+                - **ForgotPassword.js**
+            - img
+                - airbnb-logo.png
+
+## Progress so far
+- Forgot Password Screen:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/8.ForgotPasswordScreen.png" width="250">
+
+- Entering Value:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/8.1.EnteringValue.png" width="250">
+
+- Entering Wrong Value:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/8.2.EnteringWrongValue.png" width="250">
