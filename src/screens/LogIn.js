@@ -8,19 +8,23 @@ import {
     KeyboardAvoidingView
 } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 // Import custome files here.
+import { ActionCreators } from '../redux/action';
 import colors from '../styles/colors';
 import InputField from '../components/form/InputField';
 import NextArrowButton from '../components/buttons/NextArrowButton';
 import Notification from '../components/Notification';
 import Loader from '../components/Loader';
 
-export default class LogIn extends Component {
+class LogIn extends Component {
     state = {
         formValid: true,
         validEmail: false,
         emailAddress: '',
+        password: '',
         validPassword: false,
         loadingVisible: false
     };
@@ -30,13 +34,13 @@ export default class LogIn extends Component {
         this.setState({ loadingVisible: true });
 
         setTimeout(() => {
-            if (this.state.emailAddress === 'hello@imandy.ie' && this.state.validPassword) {
-                this.setState({ formValid: true, loadingVisible: false } /*, () => {
-                    alert('success');
-                    // Having a callback to alert after setState is a wise decision.
-                }*/);
+            const {
+                emailAddress, password
+            } = this.state;
+            if (this.props.logIn(emailAddress, password)) {
+                this.setState({ formValid: true, loadingVisible: false });
             } else {
-                this.setState({ formValid: false, loadingVisible: false })
+                this.setState({ formValid: false, loadingVisible: false });
             }
         }, 2000);
     }
@@ -60,6 +64,8 @@ export default class LogIn extends Component {
     }
 
     handlePasswordChange = (password) => {
+        this.setState({ password });
+
         if (!this.state.validPassword) {
             if (password.length > 4) {
                 // Password has to be at least 4 characters long
@@ -88,6 +94,9 @@ export default class LogIn extends Component {
         const showNotification = formValid ? false : true;
         const background = formValid ? colors.green01 : colors.darkOrange;
         const notificationMarginTop = showNotification ? 10 : 0;
+
+        //console.log(this.props.loggedInStatus);
+
         return (
             <KeyboardAvoidingView 
                 style={[{ backgroundColor: background }, styles.wrapper]}
@@ -192,3 +201,15 @@ const styles = StyleSheet.create({
         right: 0
     }
 });
+
+const mapStateToProps = (state) => {
+    return {
+        loggedInStatus: state.loggedInStatus
+    }
+};
+
+const mapDispatchToProps = (dispacth) => {
+    return bindActionCreators(ActionCreators, dispacth);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LogIn);

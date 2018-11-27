@@ -78,7 +78,7 @@ export default class ForgotPassword extends Component {
                 style={[{ backgroundColor: background }, styles.wrapper]}
                 behavior="padding"
             >
-                <View style={styles.form}>
+                <View style={styles.scrollViewWrapper}>
                     <ScrollView
                         style={styles.scrollView}
                     >
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         flex: 1
     },
-    form: {
+    scrollViewWrapper: {
         marginTop: 70,
         flex: 1,
         position: 'absolute',

@@ -232,3 +232,78 @@ You may have to check windows credential manager and delete the github entry und
 
 - Entering Wrong Value:
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/8.2.EnteringWrongValue.png" width="250">
+
+# 9: Airbnb Clone using React Native - Add Redux
+1. npm install --save:
+    - **react-redux**
+    - **redux**
+    - **redux-logger**
+    - **redux-thunk**
+
+## Error handling: npm ERR! Error: EPERM: operation not permitted, rename
+- I guess, I issue was the my node_module was turned to read only.
+- So I,
+    1. Closed my VS code.
+    1. deleted node_module
+        - If script is not deleting, restart the system.
+    1. Run "npm install"
+    1. Retry installing the packages, (It worked.)
+1. Restart your server.
+1. Add to directory structure.
+    - root:
+        - src
+            - containers
+            - components
+                - buttons
+                    - RoundedButtons.js
+                    - NextArrowButton.js
+                - form
+                    - InputField.js
+                - Notification.js
+                - Loader.js
+            - styles
+                - colors
+                    - index.js
+            - screens
+                - LoggedOut.js
+                - LogIn.js  
+                - ForgotPassword.js
+            - img
+                - airbnb-logo.png
+            - **redux**
+                - **store.js**
+                    - *Here Reducers, Logger, ThunkMiddleware are imported, Logger is setup, Compose and ApplyMiddleware are used to setup all the middleware and then Store is created.*
+                - **reducer**
+                    // Very confusing, I might improvise latter.
+                    - **loggedOut.js**
+                        - *Here createReducer() is imported from helper, also all the action Types are imported. Create reducer is passed empty state & type of action.*
+                    - **index.js**
+                        - *Here Combine Reducer is used to Combine all reducers exported from respective files.*
+                - **action**
+                    - **types.js**
+                        - *Simple action types.*
+                    - **loggedOut.js**
+                        - *Login action*
+                    - **index.js**
+                        - *Combine all actions.*
+                - **helpers**
+                    - **createReducer.js**
+                        - *Returns a function which setups reducer.*
+            - **data**
+                - **user.json**
+        - App.js
+            - *Store is passed down to the application here.*
+
+## Error handling: Unable to connect with remote debugger
+In my case the issue was that the emulator was making a request to:
+    ```
+    http://10.0.2.2:8081/debugger-ui
+    ```
+instead of:
+    ```
+    http://localhost:8081/debugger-ui and the request was failing.
+    ```
+To solve the issue: Before enabling remote debugging on your emulator, open http://localhost:8081/debugger-ui in chrome. Then enable remote debugging and go back to the chrome page where you should see your console logs.
+
+## Progress so far:
+- Nothing to show but yeah the syntax was kinda confusing, I just might simplify it latter.
