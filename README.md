@@ -307,3 +307,59 @@ To solve the issue: Before enabling remote debugging on your emulator, open http
 
 ## Progress so far:
 - Nothing to show but yeah the syntax was kinda confusing, I just might simplify it latter.
+
+# 10: Airbnb Clone using React Native - Add Navigation
+
+## Note: WARNING: Configuration 'compile' is obsolete and has been replaced with 'implementation' and 'api'.
+
+- We'll connect everything.
+    - Using react-nativation and react-navigation-redux-helper to connect the navigation to the redux store.
+- react-navigation-redux-helper:
+    1. How it works:
+        1. Any navigator can be passed a navigation prop to turn it into a "controlled" component, which defers state management to its parent. This mechanism is used in React Navigation to nest navigators, but it can also be used to customize state management.
+        1. A Redux middleware is used so that any events that mutate the navigation state properly trigger React Navigation's event listeners.
+        1. Finally, a reducer enables React Navigation actions to mutate the Redux state.
+    1. Note:
+        - Most projects that are using both Redux and React Navigation don't need this library.
+        - And passing navigation to the root navigator means that you will have to handle state persistance and BackHandler behavior yourself.
+        
+## Next:
+1. npm install:
+    - **react-navigation**
+    - **react-navigation-redux-helpers**
+1. Restart the server.
+1. Add to directory structure.
+    - root:
+        - src
+            - containers
+            - components
+                - buttons
+                    - RoundedButtons.js
+                    - NextArrowButton.js
+                - form
+                    - InputField.js
+                - Notification.js
+                - Loader.js
+            - styles
+                - colors
+                    - index.js
+            - screens
+                - LoggedOut.js
+                - LogIn.js  
+                - ForgotPassword.js
+            - img
+                - airbnb-logo.png
+            - redux
+                - store.js
+                - reducer
+                    - loggedOut.js
+                    - index.js
+                - action
+                    - types.js
+                    - loggedOut.js
+                    - index.js
+                - helpers
+                    - createReducer.js
+            - data
+                - user.json
+        - App.js
