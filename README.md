@@ -308,8 +308,30 @@ To solve the issue: Before enabling remote debugging on your emulator, open http
 ## Progress so far:
 - Nothing to show but yeah the syntax was kinda confusing, I just might simplify it latter.
 
-# 10: Airbnb Clone using React Native - Add Navigation
+## Work-flow of Redux in this application:
+1. 'Provider' from react-redux will pass the 'store' to the application in App.js.
+1. 'store' is created by 'configureStore' CUSTOME FUNCTION in 'store.js'.
+    - Empty object is passed to 'configureStore'.
+        - Then 'createStore' from 'redux' is used to create store, and is passed 'reducer', 'initialState' (which is empty) and 'enhancer'.
+            - 'enhancer', CUSTOME FUNCTION uses 'compose' and 'applyMiddleware' to add middleware to store.
+1. 'reducer' uses 'combineReducers' from 'redux' to combine all the reducers inported.
+1. Any reducers imports 'createReducer' from helper and 'action types'.
+    - Then specify the chance of state on a perticular action type.
+        - 'createReducer' is a CUSTOME FUNCTION which takes, 'initial state, and handler to distingise between action types.
+1. 'types.js' is used to declare action types.
+1. Any component uses Redux as follow:
+    1. Store is passed from 'App.js'.
+    1. The component imports:
+        - 'connect' from 'react-redux'.
+            - Connect is used to 'map state to props', which is passed 'state' and 'map dispatch to prop', which is passed state using bindActionCreator.
+        - 'bindActionCreaators' from 'redux'.
+            - Is used to bind all the actions created by 'ActionCreators' with dispacth and later maped to props.
+                - So the component can use the functions in the component from 'props'.
+        - CUSTOME FUNCTION 'ActionCreators' from 'redux/action'.
+            - Combines all the actions.
+    1. Every action is passed dispatched which is then used to chance state.
 
+# 10: Airbnb Clone using React Native - Add Navigation
 ## Note: WARNING: Configuration 'compile' is obsolete and has been replaced with 'implementation' and 'api'.
 
 - We'll connect everything.
