@@ -13,6 +13,7 @@ import { bindActionCreators } from 'redux';
 
 // Import custome files here.
 import { ActionCreators } from '../redux/action';
+import { transparentHeaderStyle } from '../styles/navigation';
 import colors from '../styles/colors';
 import InputField from '../components/form/InputField';
 import NextArrowButton from '../components/buttons/NextArrowButton';
@@ -20,6 +21,12 @@ import Notification from '../components/Notification';
 import Loader from '../components/Loader';
 
 class LogIn extends Component {
+
+    static navigationOptions = ({ navigation }) => ({
+        headerStyle: transparentHeaderStyle,
+        headerTintColor: colors.white
+    });
+
     state = {
         formValid: true,
         validEmail: false,

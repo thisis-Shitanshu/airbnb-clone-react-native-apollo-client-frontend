@@ -376,6 +376,7 @@ To solve the issue: Before enabling remote debugging on your emulator, open http
                 - reducer
                     - loggedOut.js
                     - index.js
+                    - **navigation.js**
                 - action
                     - types.js
                     - loggedOut.js
@@ -384,4 +385,17 @@ To solve the issue: Before enabling remote debugging on your emulator, open http
                     - createReducer.js
             - data
                 - user.json
+            - **navigators**
+                - **AppNavigator.js**
         - App.js
+
+1. We will have two navigators. One-stack navigator-which will takre care of the navigation for when the user is loged out. The other-tab navigator-which will be used once the user logged in.
+1. Now let's create a reducer which we will use to chance screen.
+1. Let's add the app navigator.
+1. We will need to add the react navigation redux middleware in store. 
+    - To dissable yellow waring:
+        - console.disableYellowBox = true;
+        - In App.js before App class.
+1. Style the Top bar:
+    - create a NavBar button Component.
+    - Need to style the header for every screen.

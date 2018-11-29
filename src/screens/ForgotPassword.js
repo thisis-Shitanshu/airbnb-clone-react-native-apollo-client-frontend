@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 // Import custome file(s) here.
+import { transparentHeaderStyle } from '../styles/navigation';
 import colors from '../styles/colors';
 import InputFiels from '../components/form/InputField';
 import Notification from '../components/Notification';
@@ -15,6 +16,12 @@ import NextArrowButton from '../components/buttons/NextArrowButton';
 import Loader from '../components/Loader';
 
 export default class ForgotPassword extends Component {
+    
+    static navigationOptions = ({ navigation }) => ({
+        headerStyle: transparentHeaderStyle,
+        headerTintColor: colors.white
+    });
+    
     state = {
         formValid: true,
         loadingVisible: false,

@@ -5,6 +5,7 @@ import {
 } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
+import { createReactNavigationReduxMiddleware } from 'react-navigation-redux-helpers';
 
 // Import custome file(s) here.
 import reducer from './reducer';
@@ -13,10 +14,16 @@ const loggerMiddleware = createLogger({
     predicate: (getState, action) => __DEV__
 });
 
+/**
+ * A Redux middleware is used so that any events that mutate the navigation state properly trigger React Navigation's event listeners.
+*/
+const navigationMiddleware = createReactNavigationReduxMiddleware('root', state => state.nav);
+
 const configureStore = (initialState) => {
     const enhancer = compose(
         applyMiddleware(
             thunkMiddleware,
+            navigationMiddleware,
             loggerMiddleware
         )
     );

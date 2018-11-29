@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import * as LoggedOut from './loggedOut';
+
+// Import custome file(s) here.
+import * as Navigation from './navigation';
 
 export default combineReducers(Object.assign(
-    LoggedOut
+    Navigation
 ));
