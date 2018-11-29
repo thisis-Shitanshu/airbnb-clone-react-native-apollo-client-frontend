@@ -9,22 +9,34 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 // Import custome files here.
-import { ActionCreators } from '../redux/action';
+import * as actions from '../redux/action';
 import { transparentHeaderStyle } from '../styles/navigation';
 import colors from '../styles/colors';
 import InputField from '../components/form/InputField';
 import NextArrowButton from '../components/buttons/NextArrowButton';
+import NavBarButton from '../components/buttons/NavBarButton';
 import Notification from '../components/Notification';
 import Loader from '../components/Loader';
 
 class LogIn extends Component {
 
     static navigationOptions = ({ navigation }) => ({
+        headerRight: <NavBarButton
+          handleButtonPress={() => navigation.navigate('ForgotPassword')}
+          location="right"
+          color={colors.white}
+          text="Forgot Password"
+        />,
+        headerLeft: <NavBarButton
+          handleButtonPress={() => navigation.goBack()}
+          location="left"
+          icon={<Icon name="angle-left" color={colors.white} size={30} />}
+        />,
         headerStyle: transparentHeaderStyle,
-        headerTintColor: colors.white
+        headerTransparent: true,
+        headerTintColor: colors.white,
     });
 
     state = {
@@ -215,8 +227,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-const mapDispatchToProps = (dispacth) => {
-    return bindActionCreators(ActionCreators, dispacth);
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(LogIn);
+export default connect(mapStateToProps, actions)(LogIn);

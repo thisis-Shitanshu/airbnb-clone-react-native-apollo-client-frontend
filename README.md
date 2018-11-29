@@ -399,3 +399,31 @@ To solve the issue: Before enabling remote debugging on your emulator, open http
 1. Style the Top bar:
     - create a NavBar button Component.
     - Need to style the header for every screen.
+
+# 10-1 Code Refactoring:
+- I just completely refactor the code for redux for my convinience.
+
+## Error: undefined is not an object (evaluating 'RNGestureHandlerModule.State')
+- remove node_modules and package-lock.json
+- npm install --save react-native-gesture-handler
+- react-native link
+
+## Error: Native module com.oblador.vectoricons.VectorIconsModule tried to override com.oblador.vectoricons.VectorIconsModule for module name RNVectorIconsModule. Check the getPackages() method in MainApplication.java, it might be that module is being created twice.
+I solve the issue modifying the MainActivity.java file. Vector module was declarated several time. Just remove the import and it works
+
+- Much better so I did the following this specifically:
+    1. Moved the store to seperate file.
+    1. Simplify the syntax of action and reducer.
+    1. Placed header on all the 3 screen we currently have.
+        - Added styles.
+        - Navigation button.
+
+## Progress so far
+- Logged Out Screen:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/10-1.1.LoggedOutScreen.png" width="250">
+
+- Log In Screen:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/10-1.2.LogInScreen.png" width="250">
+
+- Forgot Password Screen:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/10-1.3.ForgotPasswordScreen.png" width="250">

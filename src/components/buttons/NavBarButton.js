@@ -41,7 +41,7 @@ NavBarButton.propTypes = {
     color: PropTypes.string
 };
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     buttonText: {
         fontSize: 16
     }
