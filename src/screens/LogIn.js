@@ -51,6 +51,7 @@ class LogIn extends Component {
     handleNextButton = () => {
         // Let's simulate a slow server to show notification
         this.setState({ loadingVisible: true });
+        const { navigate } = this.props.navigation;
 
         setTimeout(() => {
             const {
@@ -58,6 +59,7 @@ class LogIn extends Component {
             } = this.state;
             if (this.props.logIn(emailAddress, password)) {
                 this.setState({ formValid: true, loadingVisible: false });
+                navigate('LoggedIn');
             } else {
                 this.setState({ formValid: false, loadingVisible: false });
             }

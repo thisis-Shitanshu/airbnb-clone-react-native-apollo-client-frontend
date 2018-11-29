@@ -358,6 +358,7 @@ To solve the issue: Before enabling remote debugging on your emulator, open http
                 - buttons
                     - RoundedButtons.js
                     - NextArrowButton.js
+                    - **NavBarButton.js**
                 - form
                     - InputField.js
                 - Notification.js
@@ -365,6 +366,7 @@ To solve the issue: Before enabling remote debugging on your emulator, open http
             - styles
                 - colors
                     - index.js
+                - **navigator.js**
             - screens
                 - LoggedOut.js
                 - LogIn.js  
@@ -387,6 +389,7 @@ To solve the issue: Before enabling remote debugging on your emulator, open http
                 - user.json
             - **navigators**
                 - **AppNavigator.js**
+                - **AppRouteConfigs.js**
         - App.js
 
 1. We will have two navigators. One-stack navigator-which will takre care of the navigation for when the user is loged out. The other-tab navigator-which will be used once the user logged in.
@@ -427,3 +430,67 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
 
 - Forgot Password Screen:
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/10-1.3.ForgotPasswordScreen.png" width="250">
+
+# 11: Airbnb Clone using React Native - Add Logged In Screen
+- In this section we'll create the Logged In screen which will contain the tab navigator.
+
+1. Add to directory structure.
+    - root:
+        - src
+            - containers
+                - **ExploreContainer.js**
+                - **SavedContainer.js**
+                - **ProfileContainer.js**
+                - **TripsContainer.js**
+                - **InboxContainer.js**
+            - components
+                - buttons
+                    - RoundedButtons.js
+                    - NextArrowButton.js
+                    - NavBarButton.js
+                - form
+                    - InputField.js
+                - Notification.js
+                - Loader.js
+            - styles
+                - colors
+                    - index.js
+                - navigator.js
+            - screens
+                - LoggedOut.js
+                - LogIn.js  
+                - ForgotPassword.js
+                - **LoggedIn.js**
+            - img
+                - airbnb-logo.png
+            - redux
+                - store.js
+                - reducer
+                    - loggedOut.js
+                    - index.js
+                    - navigation.js
+                - action
+                    - types.js
+                    - loggedOut.js
+                    - index.js
+                - helpers
+                    - createReducer.js
+            - data
+                - user.json
+            - navigators
+                - AppNavigator.js
+                - AppRouteConfigs.js
+                - **LoggedInTabsNavigator.js**
+        - App.js
+
+1. Style all the currently created Tabs.
+1. For Ionicons:
+    1. Import:
+        - import Icon from 'react-native-vector-icons/Ionicons';
+    1. Find: https://ionicons.com/
+1. Change to this screen when we log in.
+1. Disable the back button so that user can'r go back to login screen after Logging in.
+
+## Progress so far
+- Logged In Screen:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/11.LoggedInScreen.png" width="250">
