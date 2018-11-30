@@ -494,3 +494,61 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
 ## Progress so far
 - Logged In Screen:
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/11.LoggedInScreen.png" width="250">
+
+# 12: Airbnb Clone using React Native - Turn On Notifications Screen
+- In this section we'll build the notifications screen which will show for the first time users when they log in.
+
+1. Add to directory structure.
+    - root:
+        - src
+            - containers
+                - ExploreContainer.js
+                - SavedContainer.js
+                - ProfileContainer.js
+                - TripsContainer.js
+                - InboxContainer.js
+            - components
+                - buttons
+                    - RoundedButtons.js
+                    - NextArrowButton.js
+                    - NavBarButton.js
+                - form
+                    - InputField.js
+                - Notification.js
+                - Loader.js
+            - styles
+                - colors
+                    - index.js
+                - navigator.js
+            - screens
+                - LoggedOut.js
+                - LogIn.js  
+                - ForgotPassword.js
+                - LoggedIn.js
+                - **TurnOnNotification.js**
+            - img
+                - airbnb-logo.png
+            - redux
+                - store.js
+                - reducer
+                    - loggedOut.js
+                    - index.js
+                    - navigation.js
+                - action
+                    - types.js
+                    - loggedOut.js
+                    - index.js
+                - helpers
+                    - createReducer.js
+            - data
+                - user.json
+            - navigators
+                - AppNavigator.js
+                - AppRouteConfigs.js
+                - LoggedInTabsNavigator.js
+        - App.js
+
+## Progress so far
+- Turn On Notifications Screen:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/12.TurnOnNotificationsScreen.png" width="250">
+
