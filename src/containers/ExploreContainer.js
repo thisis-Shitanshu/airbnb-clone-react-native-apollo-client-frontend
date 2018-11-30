@@ -9,10 +9,30 @@ import {
 // Import custome file(s) here.
 import SearchBar from '../components/SearchBar';
 import Categories from '../components/explore/Categories';
+import Listings from '../components/explore/Listings';
 import colors from '../styles/colors';
 import categoriesList from '../data/categories';
+import listings from '../data/listings';
 
 export default class ExploreContainer extends Component {
+
+    renderListings = () => {
+        return listings.map((listing, index) => {
+            return (
+                <View
+                    key={`listing-${index}`}
+                >
+                    <Listings 
+                        key={`listing-item-${index}`}
+                        title={listing.title}
+                        boldTitle={listing.boldTitle}
+                        listings={listing.listings}
+                        showAddToFav={listing.showAddToFav}
+                    />
+                </View>
+            );
+        });
+    }
 
     render() {
         return (
@@ -32,6 +52,7 @@ export default class ExploreContainer extends Component {
                             categories={categoriesList}
                         />
                     </View>
+                    {this.renderListings()}
                 </ScrollView>
             </View>
         );
@@ -44,12 +65,13 @@ const styles = StyleSheet.create({
         backgroundColor: colors.white
     },
     scrollView: {
-        paddingTop: 80
+        paddingTop: 100
     },
     scrollViewContent: {
         paddingBottom: 80
     },
     categories: {
+        marginBottom: 40
     },
     heading: {
         fontSize: 22,
