@@ -22,7 +22,7 @@ const AppRouteConfigs = createStackNavigator({
     ForgotPassword: { screen: ForgotPassword },
     TurnOnNotifications: { screen: TurnOnNotifications }
 }, {
-    initialRouteName: 'LoggedOut'
+    initialRouteName: 'LoggedIn'
 });
 
 export default AppRouteConfigs;
