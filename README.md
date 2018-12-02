@@ -903,3 +903,9 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
 - No Results Component for Saved Screen:
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/18.NoResultsComponent.png" width="250">
 
+# 19: Airbnb Clone using React Native - Fix Android App Styling
+- Remove ugly buttons on press in Logged Out Screen.
+    - Replace TouchableHighlight for TouchableOpacity.
+    - We need to chance how much opacity to use.
+- Put whole screen inside a ScrollView because Android has all kind of devices compared to iPhone. We want to make sure the user can see everything.
+

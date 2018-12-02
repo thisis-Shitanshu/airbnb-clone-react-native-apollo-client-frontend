@@ -4,7 +4,8 @@ import {
     Text, 
     View,
     Image,
-    TouchableHighlight
+    TouchableHighlight,
+    ScrollView
 } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
@@ -46,7 +47,7 @@ export default class LoggedOut extends Component {
 
     render() {
         return (
-            <View style={styles.wrapper}>
+            <ScrollView style={styles.wrapper}>
                 <View style={styles.welcomeWrapper}>
                     <Image 
                         source={require('../img/airbnb-logo.png')}
@@ -107,7 +108,7 @@ export default class LoggedOut extends Component {
                         <Text style={styles.termsText}>.</Text>
                     </View>
                 </View>
-            </View>
+            </ScrollView>
         );
   }
 }

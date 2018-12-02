@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
     Text,
     View,
-    TouchableHighlight,
+    TouchableOpacity,
     StyleSheet
 } from 'react-native';
 
@@ -23,9 +23,10 @@ export default class RoundedButton extends Component {
         const color = textColor || colors.black;
 
         return (
-            <TouchableHighlight 
+            <TouchableOpacity 
                 style={[{backgroundColor}, styles.wrapper]}
                 onPress={handleOnPress}
+                activeOpacity={0.7}
             >
                 <View style={styles.buttonTextWrapper}>
                     {icon}
@@ -35,7 +36,7 @@ export default class RoundedButton extends Component {
                         {text}
                     </Text>
                 </View>
-            </TouchableHighlight>
+            </TouchableOpacity>
         );
     }
 }
