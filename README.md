@@ -764,3 +764,73 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
 	        <true/>
             </dist>
             ```
+        1. Then add **StatusBar.setBarStyle('dark-content', true);** in the desired places. 
+- Since I am not using react-navigation-redux-helper and this is for my Android. I am skipping over it. 
+- Since android has a seperate StatusBar from the screen.
+
+# 17: Airbnb Clone using React Native - Responsive design
+- Things to fix:
+    - Big Screen: Notification, Categories list.
+    - Small Screen: Text on Logged Out screen, Categories list <Done>.
+
+1. Add to directory structure.
+    - root:
+        - src
+            - **helpers**
+                - **utils.js**
+            - containers
+                - ExploreContainer.js
+                - SavedContainer.js
+                - ProfileContainer.js
+                - TripsContainer.js
+                - InboxContainer.js
+            - components
+                - Stars.js
+                - SearchBar.js
+                - explore
+                    - Categories.js
+                    - Listings.js
+                - buttons
+                    - RoundedButtons.js
+                    - NextArrowButton.js
+                    - NavBarButton.js
+                    - HeartButton.js
+                - form
+                    - InputField.js
+                - Notification.js
+                - Loader.js
+            - styles
+                - colors
+                    - index.js
+                - navigator.js
+            - screens
+                - LoggedOut.js
+                - LogIn.js  
+                - ForgotPassword.js
+                - LoggedIn.js
+                - TurnOnNotification.js
+            - img
+                - airbnb-logo.png
+            - redux
+                - store.js
+                - reducer
+                    - loggedOut.js
+                    - index.js
+                    - navigation.js
+                - action
+                    - types.js
+                    - loggedOut.js
+                    - index.js
+                - helpers
+                    - createReducer.js
+            - data
+                - user.json
+                - Categories.js
+                - listings.js
+            - navigators
+                - AppNavigator.js
+                - AppRouteConfigs.js
+                - LoggedInTabsNavigator.js
+        - App.js
+
+1. First we'll create a utility function to determine what phone we're using.

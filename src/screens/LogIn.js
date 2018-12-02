@@ -19,6 +19,14 @@ import NextArrowButton from '../components/buttons/NextArrowButton';
 import NavBarButton from '../components/buttons/NavBarButton';
 import Notification from '../components/Notification';
 import Loader from '../components/Loader';
+import iPhoneSize from '../helpers/utils';
+
+const size = iPhoneSize();
+const headingTextSize = 34;
+
+if (size === 'small') {
+    headingTextSize = 28;
+}
 
 class LogIn extends Component {
 
@@ -203,7 +211,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     loginHeader: {
-        fontSize: 30,
+        fontSize: headingTextSize,
         color: colors.white,
         fontWeight: '300',
         marginBottom: 40

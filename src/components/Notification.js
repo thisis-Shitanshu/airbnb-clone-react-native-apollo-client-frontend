@@ -12,6 +12,7 @@ import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 // Import custome file(s) here.
 import colors from '../styles/colors';
+import iPhoneSize from '../helpers/utils';
 
 export default class Notification extends Component {
     state = {

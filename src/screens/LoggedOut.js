@@ -13,6 +13,16 @@ import colors from '../styles/colors';
 import { transparentHeaderStyle } from '../styles/navigation';
 import RoundedButton from '../components/buttons/RoundedButton';
 import NavBarButton from '../components/buttons/NavBarButton';
+import iPhoneSize from '../helpers/utils';
+
+const size = iPhoneSize();
+let termsTextSize = 13;
+let headingTextSize = 30;
+
+if (size === 'small') {
+    termsTextSize = 12;
+    headingTextSize = 26;
+}
 
 export default class LoggedOut extends Component {
     static navigationOptions = ({ navigation }) => ({
@@ -121,7 +131,7 @@ const styles = StyleSheet.create({
         marginBottom: 40
     },
     welcomeText: {
-        fontSize: 30,
+        fontSize: headingTextSize,
         color: colors.white,
         fontWeight: '300',
         marginBottom: 40
@@ -147,7 +157,7 @@ const styles = StyleSheet.create({
     },
     termsText: {
         color: colors.white,
-        fontSize: 12,
+        fontSize: termsTextSize,
         fontWeight: '600'
     },
     linkButton: {
