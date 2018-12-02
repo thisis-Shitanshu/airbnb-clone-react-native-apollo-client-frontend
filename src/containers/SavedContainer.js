@@ -5,12 +5,16 @@ import {
     StyleSheet
 } from 'react-native';
 
+// Import custome file(s) here.
+import NoResult from '../components/saved/NoResults';
+import colors from '../styles/colors';
+
 export default class SavedContainer extends Component {
 
     render() {
         return (
             <View style={styles.wrapper}>
-                <Text>Saved Container</Text>
+                <NoResult />
             </View>
         );
     }
@@ -19,6 +23,6 @@ export default class SavedContainer extends Component {
 const styles = StyleSheet.create({
     wrapper: {
         display: 'flex',
-        padding: 50
+        backgroundColor: colors.white
     }
 });

@@ -834,3 +834,72 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
         - App.js
 
 1. First we'll create a utility function to determine what phone we're using.
+
+# 18: Airbnb Clone using React Native - No Saved Listings
+- We'll create the No Result component for the **Saved** tab.
+1. Add to directory structure.
+    - root:
+        - src
+            - helpers
+                - utils.js
+            - containers
+                - ExploreContainer.js
+                - SavedContainer.js
+                - ProfileContainer.js
+                - TripsContainer.js
+                - InboxContainer.js
+            - components
+                - **saved**
+                    - **NoResults.js**
+                - Stars.js
+                - SearchBar.js
+                - explore
+                    - Categories.js
+                    - Listings.js
+                - buttons
+                    - RoundedButtons.js
+                    - NextArrowButton.js
+                    - NavBarButton.js
+                    - HeartButton.js
+                - form
+                    - InputField.js
+                - Notification.js
+                - Loader.js
+            - styles
+                - colors
+                    - index.js
+                - navigator.js
+            - screens
+                - LoggedOut.js
+                - LogIn.js  
+                - ForgotPassword.js
+                - LoggedIn.js
+                - TurnOnNotification.js
+            - img
+                - airbnb-logo.png
+            - redux
+                - store.js
+                - reducer
+                    - loggedOut.js
+                    - index.js
+                    - navigation.js
+                - action
+                    - types.js
+                    - loggedOut.js
+                    - index.js
+                - helpers
+                    - createReducer.js
+            - data
+                - user.json
+                - Categories.js
+                - listings.js
+            - navigators
+                - AppNavigator.js
+                - AppRouteConfigs.js
+                - LoggedInTabsNavigator.js
+        - App.js
+
+## Progress so far
+- No Results Component for Saved Screen:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/18.NoResultsComponent.png" width="250">
+
