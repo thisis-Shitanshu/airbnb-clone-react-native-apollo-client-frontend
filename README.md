@@ -752,3 +752,15 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
 - Star Rating and Favourite Components:
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/15.StarRatingandFavouriteComponents.png" width="250">
 
+# 16: Airbnb Clone using React Native - Fixing some gaps
+- There is no button from the Login screen to go to Forgot Password screen.
+- Color of the Status bar. (iOS)
+    - First let's make it white by default instead of black.
+        1. Edit: **root\ios\AirbnbClone\Info.plist**
+            - Add:
+            ```xml
+            </array>
+        	<key>UIViewControllerBasedStatusBarAppeareance</key>
+	        <true/>
+            </dist>
+            ```
