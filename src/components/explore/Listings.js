@@ -10,26 +10,63 @@ import {
     Image,
     StyleSheet
 } from 'react-native';
-import colors from '../../styles/colors';
 
 // Import custome file(s) here.
+import HeartButton from '../buttons/HeartButton';
+import Stars from '../Stars';
+import colors from '../../styles/colors';
 
 export default class Listings extends Component {
+    randomColor = () => {
+        const colorsList = [
+            colors.gray04,
+            colors.darkOrange,
+            colors.black,
+            colors.brown01,
+            colors.blue,
+            colors.green01
+        ];
+        return colorsList[Math.floor(Math.random() * colorsList.length)];
+    }
 
     renderListings = () => {
-        const { listings } = this.props;
+        const { listings, showAddToFav } = this.props;
         return listings.map((listing, index) => {
             return (
                 <TouchableHighlight
                     style={styles.card}
                 >
-                    <View style={styles.cardContent}>
+                    <View>
+                        {showAddToFav ?
+                            <View style={styles.addToFavoriteBtn}>
+                                <HeartButton 
+                                    color={colors.white}
+                                    selectedColor={colors.pink}
+                                />
+                            </View>
+                        : null}
                         <Image  
                             style={styles.image}
                             resizeMode="contain"
                             source={listing.photo}
                         />
-                        <Text>{listing.title}</Text>
+                        <Text
+                            style={[{ color: this.randomColor() }, styles.listingType]}
+                        >{listing.type}</Text>
+                        <Text
+                            style={styles.listingTitle}
+                            numberOfLines={2}
+                        >{listing.title}</Text>
+                        <Text style={styles.listingPrice}>${listing.price} {listing.priceType}</Text>
+                        {listing.stars > 0
+                            ? (
+                            <Stars
+                                votes={listing.stars}
+                                size={10}
+                                color={colors.green02}
+                            />
+                            )
+                            : null}
                     </View>
                 </TouchableHighlight>
             );
@@ -37,12 +74,13 @@ export default class Listings extends Component {
     }
 
     render() {
-        const { title } = this.props;
+        const { title, boldTitle } = this.props;
+        const titleStyle = boldTitle ? { fontSize: 22, fontWeight: '600' } : { fontSize: 18 };
 
         return (
             <View style={styles.wrapper}>
                 <View style={styles.titleWrapper}>
-                    <Text style={styles.title}>{title}</Text>
+                    <Text style={[titleStyle, styles.title]}>{title}</Text>
                     <TouchableOpacity style={styles.seeAllBtn}>
                         <Text style={styles.seeAllBtnText}>See all</Text>
                         <Icon 
@@ -102,14 +140,34 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         minHeight: 100
     },
-    cardContent: {
-        
-    },
     image: {
         width: undefined,
         flex: 1,
         height: 100,
         borderRadius: 8,
         marginBottom: 7
+    },
+    listingTitle: {
+        fontSize: 14,
+        fontWeight: '700',
+        color: colors.gray04,
+        marginTop: 2
+    },
+    listingType: {
+        fontWeight: '700',
+        fontSize: 10
+    },
+    addToFavoriteBtn: {
+        position: 'absolute',
+        right: 12,
+        top: 7,
+        zIndex: 2
+    },
+    listingPrice: {
+        color: colors.gray04,
+        marginTop: 4,
+        marginBottom: 2,
+        fontSize: 12,
+        fontWeight: '300'
     }
 });

@@ -682,3 +682,67 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
 ## Progress so far
 - Explore Container Part 2:
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/14.ExploreContainerP2.png" width="250">
+
+# 15: Airbnb Clone using React Native - Star Rating and Favourite Components
+- Continue styling rest of the Explore tab.
+- There are two types of heading:
+    - Regular
+    - Bold
+
+1. Add to directory structure.
+    - root:
+        - src
+            - containers
+                - ExploreContainer.js
+                - SavedContainer.js
+                - ProfileContainer.js
+                - TripsContainer.js
+                - InboxContainer.js
+            - components
+                - **Stars.js**
+                - SearchBar.js
+                - explore
+                    - Categories.js
+                    - Listings.js
+                - buttons
+                    - RoundedButtons.js
+                    - NextArrowButton.js
+                    - NavBarButton.js
+                    - **HeartButton.js**
+                - form
+                    - InputField.js
+                - Notification.js
+                - Loader.js
+            - styles
+                - colors
+                    - index.js
+                - navigator.js
+            - screens
+                - LoggedOut.js
+                - LogIn.js  
+                - ForgotPassword.js
+                - LoggedIn.js
+                - TurnOnNotification.js
+            - img
+                - airbnb-logo.png
+            - redux
+                - store.js
+                - reducer
+                    - loggedOut.js
+                    - index.js
+                    - navigation.js
+                - action
+                    - types.js
+                    - loggedOut.js
+                    - index.js
+                - helpers
+                    - createReducer.js
+            - data
+                - user.json
+                - Categories.js
+                - listings.js
+            - navigators
+                - AppNavigator.js
+                - AppRouteConfigs.js
+                - LoggedInTabsNavigator.js
+        - App.js
