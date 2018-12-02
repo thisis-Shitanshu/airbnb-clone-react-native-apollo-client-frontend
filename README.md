@@ -746,3 +746,9 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
                 - AppRouteConfigs.js
                 - LoggedInTabsNavigator.js
         - App.js
+
+
+## Progress so far
+- Star Rating and Favourite Components:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/15.StarRatingandFavouriteComponents.png" width="250">
+
