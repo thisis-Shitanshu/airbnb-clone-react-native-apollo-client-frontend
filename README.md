@@ -909,3 +909,113 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
     - We need to chance how much opacity to use.
 - Put whole screen inside a ScrollView because Android has all kind of devices compared to iPhone. We want to make sure the user can see everything.
 
+# 20: Airbnb Clone using React Native - Create a List | Part 1
+1. Add to directory structure.
+    - root:
+        - src
+            - helpers
+                - utils.js
+            - containers
+                - ExploreContainer.js
+                - SavedContainer.js
+                - ProfileContainer.js
+                - TripsContainer.js
+                - InboxContainer.js
+            - components
+                - saved
+                    - NoResults.js
+                - Stars.js
+                - SearchBar.js
+                - explore
+                    - Categories.js
+                    - Listings.js
+                - buttons
+                    - RoundedButtons.js
+                    - NextArrowButton.js
+                    - NavBarButton.js
+                    - HeartButton.js
+                - form
+                    - InputField.js
+                - Notification.js
+                - Loader.js
+            - styles
+                - colors
+                    - index.js
+                - navigator.js
+            - screens
+                - **CreateList.js**
+                - LoggedOut.js
+                - LogIn.js  
+                - ForgotPassword.js
+                - LoggedIn.js
+                - TurnOnNotification.js
+            - img
+                - airbnb-logo.png
+            - redux
+                - store.js
+                - reducer
+                    - loggedOut.js
+                    - index.js
+                    - navigation.js
+                - action
+                    - types.js
+                    - loggedOut.js
+                    - index.js
+                - helpers
+                    - createReducer.js
+            - data
+                - user.json
+                - Categories.js
+                - listings.js
+            - navigators
+                - AppNavigator.js
+                - AppRouteConfigs.js
+                - LoggedInTabsNavigator.js
+        - App.js
+
+1. Update the navigation from like button to screen.
+
+## Error: A tab navigator contains a stack and you want to hide the tab bar on specific screens
+- Similar to the example above where a stack contains a tab navigator, we can solve this in two ways: add navigationOptions to our tab navigator to set the tab bar to hidden depending on which route is active in the child stack, or we can move the tab navigator inside of the stack.
+
+Imagine the following configuration:
+```
+const FeedStack = createStackNavigator({
+  FeedHome: FeedScreen,
+  Details: DetailsScreen,
+});
+
+const TabNavigator = createBottomTabNavigator({
+  Feed: FeedStack,
+  Profile: ProfileScreen,
+});
+
+const AppNavigator = createSwitchNavigator({
+  Auth: AuthScreen,
+  Home: TabNavigator,
+});
+```
+
+If we want to hide the tab bar when we navigate from the feed home to a details screen without shuffling navigators, we cannot set the tabBarVisible: false configuration in navigationOptions on DetailsScreen, because those options will only apply to the FeedStack. Instead, we can do the following:
+
+```
+const FeedStack = createStackNavigator({
+  FeedHome: FeedScreen,
+  Details: DetailsScreen,
+});
+
+FeedStack.navigationOptions = ({ navigation }) => {
+  let tabBarVisible = true;
+  if (navigation.state.index > 0) {
+    tabBarVisible = false;
+  }
+
+  return {
+    tabBarVisible,
+  };
+};
+```
+
+## Progress so far
+- Creating List Screen:
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/20.CreatingListScreen-P1.png" width="250">

@@ -30,7 +30,7 @@ export default class Listings extends Component {
     }
 
     renderListings = () => {
-        const { listings, showAddToFav } = this.props;
+        const { listings, showAddToFav, handleAddToFav } = this.props;
         return listings.map((listing, index) => {
             return (
                 <TouchableHighlight
@@ -42,6 +42,7 @@ export default class Listings extends Component {
                                 <HeartButton 
                                     color={colors.white}
                                     selectedColor={colors.pink}
+                                    onPress={handleAddToFav}
                                 />
                             </View>
                         : null}
@@ -102,6 +103,14 @@ export default class Listings extends Component {
         );
     }
 }
+
+Listings.propTypes = {
+    title: PropTypes.string.isRequired,
+    boldTitle: PropTypes.bool,
+    listings: PropTypes.array.isRequired,
+    showAddToFav: PropTypes.bool,
+    handleAddToFav: PropTypes.func
+};
 
 const styles = StyleSheet.create({
     wrapper: {

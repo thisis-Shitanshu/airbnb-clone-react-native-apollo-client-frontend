@@ -16,6 +16,11 @@ import listings from '../data/listings';
 
 export default class ExploreContainer extends Component {
 
+    handleAddToFav = () => {
+        const { navigate } = this.props.navigation;
+        navigate('CreateList');
+    }
+
     renderListings = () => {
         return listings.map((listing, index) => {
             return (
@@ -28,6 +33,7 @@ export default class ExploreContainer extends Component {
                         boldTitle={listing.boldTitle}
                         listings={listing.listings}
                         showAddToFav={listing.showAddToFav}
+                        handleAddToFav={this.handleAddToFav}
                     />
                 </View>
             );
