@@ -16,10 +16,33 @@ import listings from '../data/listings';
 
 export default class ExploreContainer extends Component {
 
-    handleAddToFav = () => {
+    state = {
+        favouriteListings: []
+    };
+
+    handleAddToFav = (listing) => {
         const { navigate } = this.props.navigation;
-        navigate('CreateList');
+        let { favouriteListings } = this.state;
+
+        const index = favouriteListings.indexOf(listing.id);
+        if (index > -1) {
+            favouriteListings = favouriteListings.filter(item => item !== listing.id);
+        } else {
+            navigate('CreateList', {listing, onCreateListClose: this.onCreateListClose});
+        }
     }
+    
+    onCreateListClose = (listingId, listCreated) => {
+        let { favouriteListings } = this.state;
+        if (listCreated) {
+            favouriteListings.push(listingId);
+        } else {
+            favouriteListings = favouriteListings.filter(item => item !== listingId);
+        }
+        this.setState({
+            favouriteListings
+        });
+    };
 
     renderListings = () => {
         return listings.map((listing, index) => {
@@ -34,6 +57,7 @@ export default class ExploreContainer extends Component {
                         listings={listing.listings}
                         showAddToFav={listing.showAddToFav}
                         handleAddToFav={this.handleAddToFav}
+                        favouriteListings={this.state.favouriteListings}
                     />
                 </View>
             );
