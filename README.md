@@ -1097,10 +1097,13 @@ FeedStack.navigationOptions = ({ navigation }) => {
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/21.2.PrivateRadioButton.png" width="250">
 
 # 22: Airbnb Clone using React Native - Create a List | Part 3
-- Create List Screenshots:
+
+## Progress so far
 - Create List Screen .
-    <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/22.1.CreateListScreen.png" width="250">
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/22.1.CreateListScreen.png" width="250">
+
 - Disabled buttom when no text.
-    <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/22.2.DisabledButton.png" width="250">
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/22.2.DisabledButton.png" width="250">
+
 - Loading.
-    <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/22.3.LoadingButton.png" width="250">
+<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/22.3.LoadingButton.png" width="250">
