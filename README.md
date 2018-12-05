@@ -1107,3 +1107,48 @@ FeedStack.navigationOptions = ({ navigation }) => {
 
 - Loading.
 <img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/22.3.LoadingButton.png" width="250">
+
+# 26: Airbnb Clone using React Native - Connecting to GraphQL backend using Apollo Client
+- In this section we'll add apollo to the react native app and try to get some listings from the simple qraphql backend we created.
+
+1. First we need to ad couple of dependencies.
+1. Let's start the server and run the backend containers.
+1. Integrate apollo into our application.
+
+- Adding to dir:
+    - root
+        - src
+            - **config**
+                - **index.js**
+
+- Add apollo provider in App.js
+- Now let's see if we can run somr GraphQL queries to fetch some listings.
+
+- GraphQL Queries:
+1. Get lists.
+    ```javascript
+    query {
+        multipleListings {
+            id,
+            title,
+            description
+        }
+    }
+    ```
+1. Mutation addListing:
+    ```javascript
+    mutation addListing {
+        addListing(data: {
+            title: "My fourth listing",
+            description: "Sample description"
+        }) {
+        title,
+        description
+      }
+    }
+    //... till fourth
+    ```
+
+- Let's try to fetch the list inside the app.
+    - *ExploreContainer.js*
+- Check data avilability in the app.
