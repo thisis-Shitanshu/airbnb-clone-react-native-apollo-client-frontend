@@ -51,14 +51,14 @@ You may have to check windows credential manager and delete the github entry und
 
 ## Progress so far:
 - Home Screen:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/1.HomeScreen.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/1.HomeScreen.png" width="250">
 
 - Facebook Button Press:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/1.1.FacebookButtonPress.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/1.1.FacebookButtonPress.png" width="250">
 
 
 - Create Account Button Press:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/1.2.CreateAccountButtonPress.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/1.2.CreateAccountButtonPress.png" width="250">
 
 # 2: Airbnb Clone using React Native - Login Screen
 - Adding to directory structure:
@@ -85,7 +85,7 @@ You may have to check windows credential manager and delete the github entry und
 
 ## Progress so far:
 - Log In Screen:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/2.LogInScreen.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/2.LogInScreen.png" width="250">
 
 # 3: Airbnb Clone using React Native - Fix button hidden by keyboard and add password toggler
 - Note:
@@ -99,13 +99,13 @@ You may have to check windows credential manager and delete the github entry und
 
 ## Progress so far:
 - Floating Next Button:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/3.1.FloatingButton.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/3.1.FloatingButton.png" width="250">
 
 - Show Password:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/3.2.ShowPassword.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/3.2.ShowPassword.png" width="250">
 
 - Handle Next Button:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/3.3.HandleNextButton.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/3.3.HandleNextButton.png" width="250">
 
 # 4 Airbnb Clone using React Native - Login Error Message
 - Adding to directory structure:
@@ -136,16 +136,16 @@ You may have to check windows credential manager and delete the github entry und
 - No there was no ScrollView error, it's just that iOS and Android and diffrent UX.
 
 - Error Screen:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/5.1.ErrorScreen.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/5.1.ErrorScreen.png" width="250">
 
 - Error-Free Screen:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/5.2.ErrorFreeScreen.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/5.2.ErrorFreeScreen.png" width="250">
 
 - Entering Value:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/5.3.EnteringValue.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/5.3.EnteringValue.png" width="250">
 
 - Entering Wrong Value:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/5.4.EnteringWrongValue.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/5.4.EnteringWrongValue.png" width="250">
 
 # 6 Airbnb Clone using React Native - Loading Modal
 - Adding to directory structure:
@@ -190,7 +190,7 @@ You may have to check windows credential manager and delete the github entry und
 
 ## Progress so far
 - Loader on handleNextButton:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/6.LoaderOnHanleNext.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/6.LoaderOnHanleNext.png" width="250">
 
 # 7: Airbnb Clone using React Native - Animated check marks
 - We'll add an animated checkmark when the input field has a valid value.
@@ -198,7 +198,7 @@ You may have to check windows credential manager and delete the github entry und
 
 
 - Animated Checkmark:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/7.AnimatedCheckmark.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/7.AnimatedCheckmark.png" width="250">
 
 # 8: Airbnb Clone using React Native - Forgot Password
 - Adding to directory structure:
@@ -225,13 +225,13 @@ You may have to check windows credential manager and delete the github entry und
 
 ## Progress so far
 - Forgot Password Screen:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/8.ForgotPasswordScreen.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/8.ForgotPasswordScreen.png" width="250">
 
 - Entering Value:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/8.1.EnteringValue.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/8.1.EnteringValue.png" width="250">
 
 - Entering Wrong Value:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/8.2.EnteringWrongValue.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/8.2.EnteringWrongValue.png" width="250">
 
 # 9: Airbnb Clone using React Native - Add Redux
 1. npm install --save:
@@ -423,13 +423,13 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
 
 ## Progress so far
 - Logged Out Screen:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/10-1.1.LoggedOutScreen.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/10-1.1.LoggedOutScreen.png" width="250">
 
 - Log In Screen:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/10-1.2.LogInScreen.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/10-1.2.LogInScreen.png" width="250">
 
 - Forgot Password Screen:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/10-1.3.ForgotPasswordScreen.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/10-1.3.ForgotPasswordScreen.png" width="250">
 
 # 11: Airbnb Clone using React Native - Add Logged In Screen
 - In this section we'll create the Logged In screen which will contain the tab navigator.
@@ -493,7 +493,7 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
 
 ## Progress so far
 - Logged In Screen:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/11.LoggedInScreen.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/11.LoggedInScreen.png" width="250">
 
 # 12: Airbnb Clone using React Native - Turn On Notifications Screen
 - In this section we'll build the notifications screen which will show for the first time users when they log in.
@@ -550,7 +550,7 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
 
 ## Progress so far
 - Turn On Notifications Screen:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/12.TurnOnNotificationsScreen.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/12.TurnOnNotificationsScreen.png" width="250">
 
 # 13: Airbnb Clone using React Native - Explore Tab - Part 1
 1. Add to directory structure.
@@ -612,7 +612,7 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
 
 ## Progress so far
 - Explore Container Part 1:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/13.ExploreContainerP1.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/13.ExploreContainerP1.png" width="250">
 
 # 14: Airbnb Clone using React Native - Explore Tab | Part 2
 - We will build the list of listtings.
@@ -681,7 +681,7 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
 
 ## Progress so far
 - Explore Container Part 2:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/14.ExploreContainerP2.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/14.ExploreContainerP2.png" width="250">
 
 # 15: Airbnb Clone using React Native - Star Rating and Favourite Components
 - Continue styling rest of the Explore tab.
@@ -750,7 +750,7 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
 
 ## Progress so far
 - Star Rating and Favourite Components:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/15.StarRatingandFavouriteComponents.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/15.StarRatingandFavouriteComponents.png" width="250">
 
 # 16: Airbnb Clone using React Native - Fixing some gaps
 - There is no button from the Login screen to go to Forgot Password screen.
@@ -901,7 +901,7 @@ I solve the issue modifying the MainActivity.java file. Vector module was declar
 
 ## Progress so far
 - No Results Component for Saved Screen:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/18.NoResultsComponent.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/18.NoResultsComponent.png" width="250">
 
 # 19: Airbnb Clone using React Native - Fix Android App Styling
 - Remove ugly buttons on press in Logged Out Screen.
@@ -1018,7 +1018,7 @@ FeedStack.navigationOptions = ({ navigation }) => {
 
 ## Progress so far
 - Creating List Screen:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/20.CreatingListScreen-P1.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/20.CreatingListScreen-P1.png" width="250">
 
 # 21: Airbnb Clone using React Native - Create a List | Part 2
 - Start by adding Title input filed. We can reuse the one from Login Screen.
@@ -1091,22 +1091,22 @@ FeedStack.navigationOptions = ({ navigation }) => {
 
 ## Progress so far
 - Public Radio Button:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/21.1.PublicRadioButton.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/21.1.PublicRadioButton.png" width="250">
 
 - Private Radio Button:
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/21.2.PrivateRadioButton.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/21.2.PrivateRadioButton.png" width="250">
 
 # 22: Airbnb Clone using React Native - Create a List | Part 3
 
 ## Progress so far
 - Create List Screen .
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/22.1.CreateListScreen.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/22.1.CreateListScreen.png" width="250">
 
 - Disabled buttom when no text.
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/22.2.DisabledButton.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/22.2.DisabledButton.png" width="250">
 
 - Loading.
-<img src="https://github.com/namaste-code/React-Native-AirbnbClone/blob/master/screenshots/22.3.LoadingButton.png" width="250">
+<img src="https://github.com/thisis-Shitanshu/airbnb-clone-react-native-apollo-client-frontend/blob/master/screenshots/22.3.LoadingButton.png" width="250">
 
 # 26: Airbnb Clone using React Native - Connecting to GraphQL backend using Apollo Client
 - In this section we'll add apollo to the react native app and try to get some listings from the simple qraphql backend we created.
